@@ -11,6 +11,8 @@ header{
     text-align: center;
 }
 
+
+
 img{
     max-width: 100%;
     /* max-height: 100%; */
@@ -22,6 +24,7 @@ img{
 }
 ul{
     display: flex;
+    flex-wrap: wrap;
 
 }
 li{
@@ -40,6 +43,16 @@ li a:hover{
 header h1{
     font-family: 'Tourney', sans-serif;
     font-size: 3rem;
+}
+@media only screen and (max-width:555px)
+{
+    header h1{
+        font-size: 2rem;
+    }
+    li{
+        margin-right: 1.5rem;
+        font-size: 1rem;
+    }
 }
 
 
@@ -115,9 +128,9 @@ button:hover{
     font-size: 2rem;
 }
 .event img{
-    max-width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+    object-fit: cover;
 }
 .event img:hover{
     transform: scale(1.1);
@@ -147,6 +160,7 @@ button:hover{
 }
 
 
+
 .merch-container{
     background-color: #7E6363;
     text-align: center;
@@ -161,8 +175,10 @@ button:hover{
 }
 
 #merch .item{
+    /* min-height: 20rem;
+    min-width: 16rem; */
     height: 20rem;
-    width: 15rem;
+    width: 16rem;
     border-radius: 10px;
     background-color: whitesmoke;
     overflow: hidden;
@@ -170,6 +186,7 @@ button:hover{
     margin: 10px 20px;
 
 }
+
 #merch{
     display: flex;
     justify-content: space-around;
@@ -205,12 +222,10 @@ button:hover{
 }
 
 
-footer{
+#cont{
     background-color: #A87C7C;
-    height: 10rem;
     padding: 10px 10px;
-    text-align: center;
-    position: relative;
+    text-align: center; 
 }
 
 footer h2{
@@ -222,6 +237,29 @@ footer h2{
 footer p{
     font-family: 'Chivo Mono', monospace;
     color: whitesmoke;
-    position: absolute;
-    bottom: 1%;
+    /* background-color: #3E3232; */
+    /* width: 100%; */
+    /* height: 100%; */
+    margin: 0;
+}
+
+.contact li{
+    width: 2.5rem;
+}
+.contact img:hover{
+    transform: scale(1.4);
+    transition-duration: 500ms;
+}
+
+.contact{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.contact .sl{
+    font-size: 0.9rem;
+}
+.contact .fl{
+    padding-top: 1%;
 }
